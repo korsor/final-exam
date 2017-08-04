@@ -3,11 +3,6 @@
  */
 public class Exam1 {
 
-    public void main(String[] args) {
-        long a = 653161544328834085L;
-        long output = solution(a);
-    }
-
     public long solution(long input) {
         long output = input;
         char[] longString = new Long(input).toString().toCharArray();
@@ -21,15 +16,12 @@ public class Exam1 {
                     for (int j = 0; j < size-1; j++) {
                         newLong[j] = '9';
                     }
-                    System.out.println("new"+newLong);
                     output = solution(Long.parseLong(String.valueOf(newLong)));
-                    System.out.println("out"+output);
                     newValue = true;
                     break;
                 }
                 else{
                     longString[i] -= 1;
-
                     for (int j = i + 1; j < size; j++) {
                         longString[j] = '9';
                     }
